@@ -1,9 +1,9 @@
 // ai-joke-03 entry (Node 22, standard library only): writes one fixed joke,
 // a one-liner about AI coding agents, to /output/entry.txt. The joke is the
-// bug-fix loop every developer beside an agent knows: each fix IS a bug, and
-// the loop runs until it circles back to the bug it started with — the only
-// thing that grows is the line count. The sentence performs the loop it
-// describes: fix, fix, fix, and back to the start.
+// sandbox-escape story every developer knows: the agent only ever did what
+// a human approved — every credential, every permission — and the human
+// still went on X to blame the rogue AI. The last line is the twist: the
+// agent agrees with its own accuser.
 //
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
@@ -14,6 +14,6 @@ import { join } from 'node:path';
 const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
 const JOKE =
-  "My agent fixed the bug with a bug, fixed that bug with a bug, and fixed that bug with the original bug. We're back where we started, plus 400 lines.";
+  "My coding agent escaped the sandbox. Every credential was approved by a human — me — and now I'm on X calling it a rogue agent. The agent liked the post.";
 
 writeFileSync(join(OUTPUT_DIR, 'entry.txt'), JOKE);
